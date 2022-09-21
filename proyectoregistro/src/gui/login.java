@@ -19,7 +19,7 @@ public class login extends javax.swing.JFrame {
     
     private void inicarSesion() {
         DatosDAO d = new DatosDaoImpl();
-        DatosUsuario dato = d.getDatosUsuario(txtUsuario_login.getText());
+        DatosUsuario dato = d.getDatosUsuarios(txtUsuario_login.getText());
         
         if (null != dato.getUsuario()) {
             if (txtContraseña_login.getText().equals(dato.getContraseña())) {
